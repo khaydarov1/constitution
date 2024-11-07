@@ -1,0 +1,13 @@
+{% extends 'constitution/base.html' %}
+
+{% block content %}
+<h2>{{ chapter.title }}</h2>
+<p>{{ chapter.description }}</p>
+
+<h3>Moddalar:</h3>
+<ul>
+    {% for article in chapter.articles.all %}
+        <li>Modda {{ article.number }}: {{ article.content }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'constitution/base.html' %}
+
+{% block content %}
+<h1>O'zbekiston Respublikasi Konstitutsiyasi</h1>
+<ul>
+    {% for section in sections %}
+        <li><a href="{% url 'section_detail' section.id %}">{{ section.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
